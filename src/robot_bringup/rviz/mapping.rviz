@@ -1,0 +1,111 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Help Height: 0
+    Tree Height: 300
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid (1 m)
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 30
+      Color: 160; 160; 164
+      Alpha: 0.3
+      Reference Frame: map
+      Value: true
+    - Class: rviz_default_plugins/Map
+      Name: 2D Map (nvblox occupancy)
+      Enabled: true
+      Topic:
+        Value: /nvblox_node/static_occupancy_grid
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Color Scheme: map
+      Alpha: 1
+      Draw Behind: true
+      Value: true
+    - Class: nvblox_rviz_plugin/NvbloxMesh
+      Name: "3D Mesh (nvblox) - OFF - crashes nvblox (CUDA OOM); mesh is saved as .ply instead"
+      Enabled: false
+      Topic:
+        Value: /nvblox_node/mesh
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: Camera trajectory (cuVSLAM)
+      Enabled: true
+      Topic:
+        Value: /visual_slam/tracking/slam_path
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Color: 0; 120; 255
+      Line Style: Billboards
+      Line Width: 0.04
+      Alpha: 1
+      Value: true
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Visual landmarks (cuVSLAM)
+      Enabled: false
+      Topic:
+        Value: /visual_slam/vis/landmarks_cloud
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Size (m): 0.03
+      Color Transformer: FlatColor
+      Color: 255; 170; 0
+      Style: Points
+      Value: false
+    - Class: rviz_default_plugins/Axes
+      Name: Camera pose
+      Enabled: true
+      Reference Frame: camera_link
+      Length: 0.4
+      Radius: 0.04
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: D455 infrared (left)
+      Enabled: true
+      Topic:
+        Value: /camera/infra1/image_rect_raw
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 10
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Measure
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Target Frame: <Fixed Frame>
+      X: 0
+      Y: 0
+      Scale: 60
+      Angle: 0
+      Near Clip Distance: 0.01
+    Saved: ~
+Window Geometry:
+  Width: 1400
+  Height: 850

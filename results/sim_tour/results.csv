@@ -1,0 +1,6 @@
+goal,result,astar_poses,astar_length_m,plan_time_ms,travel_time_s,driven_m
+Room A - top left,SUCCEEDED,327,8.2,83.9,37.4,10.21
+Middle room,SUCCEEDED,203,5.08,1728.2,42.6,10.15
+Room C - bottom right,SUCCEEDED,185,4.65,178.7,32.4,7.82
+Room C - top right,SUCCEEDED,245,6.16,99.3,54.0,12.93
+Home (start),FAILED,626,15.69,209.8,136.6,30.46

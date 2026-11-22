@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_bringup</name>
+  <version>0.0.1</version>
+  <description>One-shot bringup: RealSense + cuVSLAM + Nav2 (A*) for a mobile robot on Jetson Orin Nano</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>realsense2_camera</exec_depend>
+  <exec_depend>isaac_ros_visual_slam</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>nvblox_ros</exec_depend>
+  <exec_depend>nvblox_nav2</exec_depend>
+  <exec_depend>foxglove_bridge</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,27 @@
+PRE-FLIGHT TESTS
+  [PASS] Simulation clock running: real-time factor 0.68
+  [PASS] Depth camera stream:   8.1 Hz sim-time (need >= 8.0)
+  [WARN] RGB camera stream:   7.3 Hz sim-time (need >= 8.0)
+  [PASS] Wheel odometry:  27.9 Hz sim-time (need >= 20.0)
+  [PASS] nvblox map slice (GPU mapping):   4.6 Hz sim-time (need >= 1.0)
+  [PASS] TF chain map -> odom -> base_link: robot at (0.00, 0.00)
+  [PASS] TF robot body -> camera: ok
+  [PASS] Nav2 planner_server: active
+  [PASS] Nav2 controller_server: active
+  [PASS] Nav2 bt_navigator: active
+  [PASS] Global costmap from nvblox: 7.8 m2 mapped
+  [PASS] A* planner responds: 83 ms
+
+================================================================
+ DEMO SUMMARY
+================================================================
+goal                        result  poses     A*_m  plan_ms  time_s  drove_m
+Room A - top left        SUCCEEDED    327      8.2     83.9    37.4    10.21
+Middle room              SUCCEEDED    203     5.08   1728.2    42.6    10.15
+Room C - bottom right    SUCCEEDED    185     4.65    178.7    32.4     7.82
+Room C - top right       SUCCEEDED    245     6.16     99.3    54.0    12.93
+Home (start)                FAILED    626    15.69    209.8   136.6    30.46
+Success rate     : 4/5
+Total time       : 307 s,  total distance 72.4 m
+A* planning time : mean 460 ms, max 1728 ms
+Map built        : 95.8 m2 explored, 42.5 m2 free, 30.4 m2 obstacles
